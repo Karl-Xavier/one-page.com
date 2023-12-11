@@ -1,0 +1,182 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	color: white;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.page {
+	border: 1px solid whitesmoke;
+	border-radius: 15px;
+	box-shadow: -2px 2px 5px  #FFF;
+}
+
+h2 {
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
+
+input, 
+textarea,
+select {
+	font: inherit;
+}
+
+.one-click {
+	margin-left: 10px;
+	height: 15px;
+	width: 10%;
+}
+
+.one-label {
+	margin-left: 0;
+}
+
+input:first-child {
+	margin-top: 20px;
+}
+
+label {
+	margin-left: 15px;
+}
+
+.h2 {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+select {
+	width: 50%;
+	margin-left: 20px;
+	border-radius: 5px;
+}
+
+option {
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+}
+
+input {
+	width: 75%;
+	height: 35px;
+	border: 0.5px solid #333;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.already {
+	text-align: center;
+}
+
+.a {
+	color: white;
+	text-decoration: none;
+}
+
+.a:hover {
+	color: darkblue;
+}
+
+.p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+	text-align: center;
+}
+
+button {
+	margin-left: 25%;
+	height: 35px;
+	width: 200px;
+	border-radius: 20px;
+	background-color: blue;
+	color: white;
+}
+
+button:hover {
+   background-color: rgba(0, 0, 255, 0.5);
+   color: white;
+}
+
+.box {
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	border-radius: 50%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.animate {
+	animation-name: slide;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0.5s;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+.animate2 {
+	animation-name: slide2;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0.5s;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+
+	33% {
+		transform: translateX(400px) rotate(180deg);
+		background-color: gold;
+	}
+
+	66% {
+		transform: translateX(400px) rotate(-180deg);
+		background-color: firebrick;
+	}
+
+	100% {
+		transform: translateX(0);
+		background-color: blue;
+	}
+}
+
+@keyframes slide2 {
+	0% {
+		transform: translateX(0);
+	}
+
+	33% {
+		transform: translateX(-400px) rotate(180deg);
+		background-color: gold;
+	}
+
+	66% {
+		transform: translateX(-400px) rotate(-180deg);
+		background-color: firebrick;
+	}
+
+	100% {
+		transform: translateX(0);
+		background-color: blue;
+	}
+}
