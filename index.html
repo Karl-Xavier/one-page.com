@@ -5,43 +5,51 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>LOGIN/SIGN-UP PAGE</title>
 	<link rel="stylesheet" href="one.css">
-</head>
+</head> 
 <body>
   
   <main class="flex">
-  	<div class="box animate"></div>
-  	<div class="box animate2"></div>
-  	<h2>LOCAL WEB SERVER</h2>
+  	<h1>Local Web Server</h1>
   	<div class="page">
-       <form method="get" action="">
-       	<p>
-       	 <label for="name">Name:<input type="text" id="name" name="name" required autofocus="on"></label>
-       	</p>
-       	<p>
-       	 <label for="lastName">LastName:<input type="text" id="lastName" name="lastName" required></label>
-       	</p>
-       	<p>
-       	 <label for="password">Password:<input type="password" id="password" name="password" required></label>
-       	</p>
-       	<p>
-       	 <label for="phoneNumber">Number:<input type="tel" id="number" name="number" required></label>
-       	</p>
-       	 <h2 class="h2">What do you expect from us?</h2>
+       <form action="">
+		<h2 id="title">Sign Up</h2>
+			<div class="group">
+       			<div class="input-field" id="nameField">
+					<input type="text" placeholder="Name">
+				</div>
+
+				<div class="input-field">
+					<input type="email" placeholder="Email">
+				</div>
+
+				<div class="input-field">
+					<input id="password" type="password" placeholder="Password">
+				</div>
+			</div>
+       	
+       	 	<h2 class="h2">What do you expect from us?</h2>
        	 	<select>
-       	 		<option></option>
+       	 		<option>Select</option>
        	 		<option>To take Responsibility whenever a suitiation arises</option>
        	 		<option>Make a Speech Adressing the people of your Igorance</option>
        	 		<option>i will give you $1000</option>
        	 	</select>
-       	 <p>
-       	 <input class="one-click" type="checkbox" id="on-click" name="terms-and-conditions" required><label class="one-label" for="on-click">Agree with our Terms and Conditions</label>
-       	</p>
-       	<button type="submit" name="submit">Sign Up</button>
-       	<p class="already">Already have an account? <a class="a" href="">Log in</a></p>
+       	 	<p>
+       	 		<label class="one-label" for="on-click"><input class="one-click" type="checkbox" id="on-click" name="terms-and-conditions" required>I agree with the terms & conditions</label>
+       		</p>
+			   <div class="btn-field">
+				<button type="button" id="signupBtn">Sign Up</button>
+				<button type="button" id="signinBtn" class="disable">Sign In</button>
+
+			   </div>
+       		
+       		<p class="already">Forgot Password? <a class="a" href="">Click here</a></p>
        </form>
-       <p class="p">A Project by Lord_Kamisama</p>
+       <p class="p">A Project by Me</p>
   	</div>
   </main>
 
+
+  <script src="app.js"></script>
 </body>
 </html>

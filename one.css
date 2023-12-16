@@ -2,9 +2,10 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-}
+} 
 
 body {
+	height: 100vh;
 	background-color: #000;
 	color: white;
 }
@@ -23,9 +24,16 @@ body {
 	box-shadow: -2px 2px 5px  #FFF;
 }
 
-h2 {
+h1 {
 	margin-top: 50px;
 	margin-bottom: 15px;
+	user-select: none;
+}
+
+#title {
+	font-size: 1.5rem;
+	text-align: center;
+	margin-top: 10px;
 }
 
 input, 
@@ -73,12 +81,22 @@ input {
 	width: 75%;
 	height: 35px;
 	border: 0.5px solid #333;
-	border-radius: 10px;
+	border-radius: 5px;
 	margin-bottom: 20px;
+	outline: 0;
+	padding: 18px 15px;
+	margin-left: 20px;
+}
+
+.input-field {
+	max-height: 65px;
+	transition: max-height 0.5s;
+	overflow: hidden;
 }
 
 .already {
 	text-align: center;
+	margin-top: 10px;
 }
 
 .a {
@@ -96,18 +114,32 @@ input {
 	text-align: center;
 }
 
+.btn-field {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
 button {
-	margin-left: 25%;
-	height: 35px;
-	width: 200px;
-	border-radius: 20px;
+	flex-basis: 40%;
 	background-color: blue;
 	color: white;
+	height: 40px;
+	border-radius: 20px;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	transition: background 1s;
 }
 
 button:hover {
-   background-color: rgba(0, 0, 255, 0.5);
+   background-color: rgba(26, 26, 97, 0.5);
    color: white;
+}
+
+.btn-field button.disable {
+	background: whitesmoke;
+	color: #000;
 }
 
 .box {
@@ -117,66 +149,4 @@ button:hover {
 	border-radius: 50%;
 	margin-bottom: 10px;
 	margin-top: 10px;
-}
-
-.animate {
-	animation-name: slide;
-	animation-duration: 5s;
-	animation-timing-function: ease-in-out;
-	animation-delay: 0.5s;
-	animation-iteration-count: 3;
-	animation-direction: alternate;
-	animation-fill-mode: forwards;
-}
-
-.animate2 {
-	animation-name: slide2;
-	animation-duration: 5s;
-	animation-timing-function: ease-in-out;
-	animation-delay: 0.5s;
-	animation-iteration-count: 3;
-	animation-direction: alternate;
-	animation-fill-mode: forwards;
-}
-
-@keyframes slide {
-	0% {
-		transform: translateX(0);
-	}
-
-	33% {
-		transform: translateX(400px) rotate(180deg);
-		background-color: gold;
-	}
-
-	66% {
-		transform: translateX(400px) rotate(-180deg);
-		background-color: firebrick;
-	}
-
-	100% {
-		transform: translateX(0);
-		background-color: blue;
-	}
-}
-
-@keyframes slide2 {
-	0% {
-		transform: translateX(0);
-	}
-
-	33% {
-		transform: translateX(-400px) rotate(180deg);
-		background-color: gold;
-	}
-
-	66% {
-		transform: translateX(-400px) rotate(-180deg);
-		background-color: firebrick;
-	}
-
-	100% {
-		transform: translateX(0);
-		background-color: blue;
-	}
 }
